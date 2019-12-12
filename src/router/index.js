@@ -18,7 +18,19 @@ const routes = [
     // which is lazy-loaded when the route is visited.
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/About.vue")
-  }
+  },
+  {
+    path: "/test1",
+    name: "test1",
+    component: () =>
+    import( "../views/Test1.vue")
+  },
+  {
+    path: "/test2",
+    name: "test2",
+    component: () =>
+      import( "../views/Test2.vue")
+  },
 ];
 
 const router = new VueRouter({

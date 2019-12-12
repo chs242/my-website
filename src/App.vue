@@ -1,16 +1,20 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
+      <router-link to="/">Home</router-link>
       <router-link to="/about">About</router-link>
+      <router-link to="/test1">Test1</router-link>
+      <router-link to="/test2">Test2</router-link>
     </div>
     <router-view />
   </div>
 </template>
 
 <style>
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:700&display=swap');
+
 #app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  font-family: 'Source Code Pro', monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -24,6 +28,7 @@
 #nav a {
   font-weight: bold;
   color: #2c3e50;
+  padding: 3px;
 }
 
 #nav a.router-link-exact-active {
