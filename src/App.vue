@@ -5,10 +5,16 @@
       <router-link to="/about">About</router-link>
       <router-link to="/test1">Test1</router-link>
       <router-link to="/test2">Test2</router-link>
-    </div>
+      </div>
     <router-view />
   </div>
 </template>
+
+<script>
+export default {
+  
+}
+</script>
 
 <style>
 @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:700&display=swap');
@@ -18,7 +24,9 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #fff;
+  background-color: #000;
+  height: 100vh;
 }
 
 #nav {
@@ -27,7 +35,7 @@
 
 #nav a {
   font-weight: bold;
-  color: #2c3e50;
+  color: #fff;
   padding: 3px;
 }
 
