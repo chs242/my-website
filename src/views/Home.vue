@@ -1,16 +1,20 @@
 <template>
   <div class="home">
-    <HelloWorld />
-    <MyName /> 
-    <!--infinite looping-->
-    <vue-typed-js :strings="['Hello my name is Edward Stern ^1000 I am a ']" :showCursor="false" :loop="false">
-    <h2 class="typing"></h2>
-    </vue-typed-js>
+    <HelloWorld class="hello-world" />
+     
+    <div class="typed1">
+      <vue-typed-js :strings="['Hello my name is Edward Stern ^1000 I am a ']" :showCursor="false" :loop="false">
+        <h2 class="typing"></h2>
+      </vue-typed-js>
+    </div>
+    <div class="typed2">    
+      <vue-typed-js :strings="['Self taught web developer', 'United Hatzola volunteer EMT', 'Kollel financial secretary']" :showCursor="false" :startDelay="3800" :backDelay="1500" loop="true">
+        <h2 class="typing"></h2>
+      </vue-typed-js>
+    </div>
 
-  <!-- type pausing -->
-  <vue-typed-js :strings="['self taught web developer', 'united Hatzola volunteer EMT', 'Rosh Kollel']" :showCursor="false" :startDelay="3800" :backDelay="1500" loop="true">
-    <h2 class="typing"></h2>
-  </vue-typed-js>
+    <MyName class="my-name"/>
+
   </div>
 </template>
 
@@ -28,3 +32,28 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+  .hello-world{
+    width: 100%;
+    position: absolute;
+    top: 2vh;
+    
+  }
+
+  .typed1{
+    position: absolute;
+    top:20vh;
+  }
+  .typed2{
+    position: absolute;
+    top: 25vh;
+  }
+
+  .my-name{
+    border: 2px solid white;
+    position: absolute;
+    bottom: 2vh;
+    right: 1vw;
+  }
+</style>

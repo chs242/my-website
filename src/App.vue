@@ -27,16 +27,24 @@ export default {
   color: #fff;
   background-color: #111;
   height: 100vh;
+  position: relative;
 }
 
 #nav {
+ 
   padding: 30px;
+  position: absolute;
+  bottom: 10vh;
+  left: 2vw;
 }
 
 #nav a {
   font-weight: bold;
   color: #fff;
-  padding: 3px;
+  text-decoration: none;
+  display: block;
+  padding: 3px 0;
+  margin: 10px 0;
 }
 
 #nav a.router-link-exact-active {

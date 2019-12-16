@@ -1,6 +1,6 @@
 <template>
-    <div>
-        <h1>hello</h1>
+    <div class="video">
+        <h1>this will be the video</h1>
     </div>
 </template>
 
@@ -13,5 +13,8 @@ export default {
 </script>
 
 <style scoped>
-
+    div{
+        height: 60vh;
+        width: 85vw;
+    }
 </style>
