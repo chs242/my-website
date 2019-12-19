@@ -21,26 +21,26 @@
         :showCursor="false"
         :startDelay="3800"
         :backDelay="1500"
-        loop="true"
+        loop=true
       >
         <h2 class="typing"></h2>
       </vue-typed-js>
     </div>
 
-    <MyName class="my-name" />
+    <VideoBox class="vid-box" />
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
 import HelloWorld from "@/components/HelloWorld.vue";
-import MyName from "@/components/MyName.vue";
+import VideoBox from "@/components/VideoBox.vue";
 
 export default {
   name: "home",
   components: {
     HelloWorld,
-    MyName
+    VideoBox
   }
 };
 </script>
@@ -61,8 +61,7 @@ export default {
   top: 25vh;
 }
 
-.my-name {
-  border: 2px solid white;
+.vid-box {
   position: absolute;
   bottom: 2vh;
   right: 1vw;
