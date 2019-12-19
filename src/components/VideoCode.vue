@@ -1,8 +1,6 @@
 <template>
     
-        <video loop>
-        <source src="src\assets\World - 1992.mp4" type="video/mp4">
-        Your browser does not support the video tag.
+        <video src="src\assets\World-1992.mp4"  loop controls width="100%">
         </video>
     
 </template>
