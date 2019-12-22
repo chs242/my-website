@@ -23,8 +23,10 @@ export default {
 <style scoped>
 div {
   display: flex;
-  border: 2px solid white;
   height: 60vh;
   width: 85vw;
+  color: #000;
+  z-index: 1;
+  opacity: 0.6;
 }
 </style>

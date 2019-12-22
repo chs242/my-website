@@ -1,17 +1,26 @@
 <template>
-    <h1>this works</h1>
+    <div class="video-container">
+       <video src="../assets/gateshead-yeshiva.mp4" autoplay preload="metadata" muted loop>
+        </video>
+    </div>
 </template>
 
 <script>
 export default {
-    name: 'VideoLearn'
+    name: 'VideoCode'
 }
 </script>
 
 <style scoped>
-    h1{
-        margin: 0;
-        border: 2px solid white;
+
+    .video-container{        
         width: 33%;
+        position: relative;
+
+    }
+    video{
+        position: absolute;
+        left: 0;
+        top: 0;
     }
 </style>

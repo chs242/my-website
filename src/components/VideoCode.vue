@@ -1,6 +1,6 @@
 <template>
     <div class="video-container">
-       <video src="../assets/World-1992.mp4" autoplay preload="metadata" muted loop>
+       <video src="../assets/Hud - 22449.mp4" autoplay preload="metadata" muted loop>
         </video>
     </div>
 </template>
@@ -13,17 +13,14 @@ export default {
 
 <style scoped>
 
-    .video-container{
+   .video-container{        
+        width: 33%;
         position: relative;
-        height: 100%;
-        width: 33%
 
     }
     video{
         position: absolute;
         left: 0;
         top: 0;
-        width: 100%;
-        height: 100%;
     }
 </style>
