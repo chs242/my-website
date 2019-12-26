@@ -1,6 +1,6 @@
 <template>
     <div class="video-container">
-       <video src="../assets/emergency-emt.mp4" autoplay preload="metadata" muted loop>
+       <video id="video" src="../assets/emergency-emt.mp4" autoplay preload="metadata" muted loop>
         </video>
     </div>
 </template>
@@ -13,14 +13,13 @@ export default {
 
 <style scoped>
 
-.video-container{        
+   .video-container{        
         width: 33%;
         position: relative;
+        overflow: hidden;
 
     }
-    video{
-        position: absolute;
-        left: 0;
-        top: 0;
+    #video{
+     margin-left: -500px;   
     }
 </style>

@@ -1,6 +1,6 @@
 <template>
     <div class="video-container">
-       <video src="../assets/Hud - 22449.mp4" autoplay preload="metadata" muted loop>
+       <video id="video" src="../assets/typing-fast.mp4" autoplay preload="metadata" muted loop>
         </video>
     </div>
 </template>
@@ -16,8 +16,14 @@ export default {
    .video-container{        
         width: 33%;
         position: relative;
+        overflow: hidden;
 
     }
+    #video{
+     margin-left: -850px;   
+     margin-bottom: -250px;   
+    }
+
     video{
         position: absolute;
         left: 0;
