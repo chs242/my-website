@@ -17,6 +17,7 @@ export default {
     VideoEmt,
     VideoLearn
   },
+  //not a working function
   computed:{
     playDelay: function (){
        return setTimout(this.VideoEmt.play(), 5000);
