@@ -1,19 +1,15 @@
 <template>
     <div class="video-container">
-       <video id="video" playDelay src="../assets/emergency-emt.mp4" autoplay preload="metadata" muted loop>
+       <video id="video" src="../assets/emergency-emt.mp4" autoplay preload="metadata" muted loop>
         </video>
     </div>
 </template>
 
 <script>
 export default {
-    name: 'VideoCode'
+    name: 'VideoEmt'
 };
-computed:{
-    playDelay: function (){
-       return setTimout(this.video.play(), 5000);
-    }
-}
+
 </script>
 
 <style scoped>

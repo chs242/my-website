@@ -1,7 +1,7 @@
 <template>
   <div class="video">
     <VideoCode></VideoCode>
-    <VideoEmt playDelay ></VideoEmt>
+    <VideoEmt ></VideoEmt>
     <VideoLearn></VideoLearn>
   </div>
 </template>
@@ -19,9 +19,7 @@ export default {
   },
   //not a working function
   computed:{
-    playDelay: function (){
-       return setTimout(this.VideoEmt.play(), 5000);
-    }
+    
   }
 }
 </script>
@@ -37,7 +35,7 @@ div {
   bottom: 1vh;
   color: #000;
   z-index: 1;
-  opacity: 0.5;
+  opacity: 0.7;
   border-radius: 10px;
 }
 </style>
