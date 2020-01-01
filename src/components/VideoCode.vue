@@ -1,13 +1,27 @@
 <template>
     <div class="video-container">
-       <video id="video" src="../assets/typing-fast.mp4" autoplay preload="metadata" muted loop>
-        </video>
+        <transition name="fade">
+            <video :="isVisible" id="video" src="../assets/typing-fast.mp4" autoplay preload="metadata" muted loop></video>
+        </transition>
     </div>
 </template>
 
 <script>
 export default {
-    name: 'VideoCode'
+    name: 'VideoCode',
+    data(){
+        return{
+            isVisible: false
+        }
+    },
+    methods:{
+        timeOut(){
+            setTimeout(function(){this.isVisible = true}, 3000)
+        }
+    },
+    mounted(){
+        this.timeOut()
+    }
 }
 </script>
 
@@ -28,5 +42,12 @@ export default {
         position: absolute;
         left: 0;
         top: 0;
+    }
+    .fade-enter {
+    opacity: 0;
+    }
+
+    .fade-enter-active{
+    transition: 0.5s;
     }
 </style>
