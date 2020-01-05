@@ -17,7 +17,7 @@ export default {
     },
     methods:{
         timeOut(){
-            setTimeout(() => this.isVisible = true, 3000)
+            setTimeout(() => this.isVisible = true, 4000)
         },
         debug() {
             console.log(this.isVisible)
@@ -40,18 +40,18 @@ export default {
      margin-left: -850px;   
      margin-bottom: -250px;
     }
-    video{
-        position: absolute;
-        left: 0;
-        top: 0;
-    }
+    
     .fade-enter {
         opacity: 0;
     }
 
     .fade-enter-active{
-        transition: 1.5s;
-        opacity: 1;
+        transition: 3.5s;
+        
 
+    }
+
+    .fade-enter-to{
+        opacity: 1;
     }
 </style>

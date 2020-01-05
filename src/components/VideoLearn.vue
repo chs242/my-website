@@ -1,13 +1,30 @@
 <template>
     <div class="video-container">
-       <video id="video" src="../assets/gateshead-yeshiva.mp4" autoplay preload="metadata" muted loop>
-        </video>
+        <transition name="fade">
+            <video id="video" src="../assets/gateshead-yeshiva.mp4" autoplay v-show="isVisible" muted loop></video>
+        </transition>
     </div>
 </template>
 
 <script>
 export default {
-    name: 'VideoCode'
+    name: 'VideoCode',
+    data(){
+        return{
+            isVisible: false
+        }
+    },
+    methods:{
+        timeOut(){
+            setTimeout(() => this.isVisible = true, 12000)
+        },
+        debug() {
+            console.log(this.isVisible)
+        }
+    },
+    mounted(){
+        this.timeOut()
+    }
 }
 </script>
 
@@ -21,5 +38,19 @@ export default {
     }
     #video{
      margin-left: -370px;   
+    }
+
+    .fade-enter {
+        opacity: 0;
+    }
+
+    .fade-enter-active{
+        transition: 3.5s;
+        
+
+    }
+
+    .fade-enter-to{
+        opacity: 1;
     }
 </style>
