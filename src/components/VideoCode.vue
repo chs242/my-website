@@ -1,8 +1,9 @@
 <template>
     <div class="video-container">
         <transition name="fade">
-            <video id="video" src="../assets/typing-fast.mp4" autoplay preload="metadata" muted loop> {{timeOut()}} </video>
+            <video id="video" src="../assets/typing-fast.mp4" autoplay preload="metadata" v-show="isVisible" muted loop></video>
         </transition>
+            <!-- <button style="z-index:10" @click="debug()">Debug</button> -->
     </div>
 </template>
 
@@ -11,17 +12,20 @@ export default {
     name: 'VideoCode',
     data(){
         return{
-            isVisible: true
+            isVisible: false
         }
     },
     methods:{
         timeOut(){
-            setTimeout(function(){this.isVisible = false}, 3000)
+            setTimeout(() => this.isVisible = true, 3000)
+        },
+        debug() {
+            console.log(this.isVisible)
         }
     },
-    /*mounted(){
+    mounted(){
         this.timeOut()
-    }*/
+    }
 }
 </script>
 
@@ -39,13 +43,15 @@ export default {
     video{
         position: absolute;
         left: 0;
-        top: 0; 
+        top: 0;
     }
     .fade-enter {
-        opacity: 1;
+        opacity: 0;
     }
 
     .fade-enter-active{
-        transition: 0.5s;
+        transition: 1.5s;
+        opacity: 1;
+
     }
 </style>
