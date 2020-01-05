@@ -13,7 +13,7 @@
         <vue-typed-js
             :strings="[
             'Self taught web developer',
-            'United Hatzola volunteer EMT',
+            'MDA and United Hatzola volunteer EMT',
             'Kollel financial secretary'
             ]"
             :showCursor="false"

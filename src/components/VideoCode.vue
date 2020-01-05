@@ -3,7 +3,6 @@
         <transition name="fade">
             <video id="video" src="../assets/typing-fast.mp4" autoplay preload="metadata" v-show="isVisible" muted loop></video>
         </transition>
-            <!-- <button style="z-index:10" @click="debug()">Debug</button> -->
     </div>
 </template>
 
