@@ -17,10 +17,7 @@ export default {
     VideoEmt,
     VideoLearn
   },
-  //not a working function
-  computed:{
-    
-  }
+  
 }
 </script>
 
