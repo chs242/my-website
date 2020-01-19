@@ -1,21 +1,24 @@
 <template>
   <div class="video">
-    <VideoCode></VideoCode>
-    <VideoEmt></VideoEmt>
-    <VideoLearn></VideoLearn>
+    <VideoEmt :urlList="urlList"></VideoEmt>
   </div>
 </template>
 <script>
-import VideoCode from "@/components/VideoCode.vue";
 import VideoEmt from "@/components/VideoEmt.vue";
-import VideoLearn from "@/components/VideoLearn.vue";
 
 export default {
   name: "VideoBox",
   components: {
-    VideoCode,
-    VideoEmt,
-    VideoLearn
+    VideoEmt
+  },
+  data() {
+    return {
+      urlList: [
+        "/typing-fast.mp4",
+        "/emergency-emt.mp4",
+        "/gateshead-yeshiva.mp4"
+      ]
+    };
   }
 };
 </script>

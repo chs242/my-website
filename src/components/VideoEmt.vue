@@ -1,15 +1,16 @@
 <template>
   <div class="video-container">
-    <transition name="fade">
+    <transition-group name="fade">
       <video
-        id="video"
-        src="../assets/emergency-emt.mp4"
+        v-for="url in urlList"
+        :src="url"
         autoplay
         v-show="isVisible"
         muted
         loop
+        :key="url"
       ></video>
-    </transition>
+    </transition-group>
   </div>
 </template>
 
@@ -19,6 +20,11 @@ export default {
   data() {
     return {
       isVisible: false
+    };
+  },
+  props: {
+    urlList: {
+      type: Array
     }
   },
   methods: {
@@ -26,9 +32,9 @@ export default {
       setTimeout(() => (this.isVisible = true), 5000);
     }
   },
-    mounted() {
-      this.timeOut();
-    }
+  mounted() {
+    this.timeOut();
+  }
 };
 </script>
 
@@ -38,7 +44,7 @@ export default {
   position: relative;
   overflow: hidden;
 }
-#video {
+video {
   margin-left: -500px;
 }
 

@@ -5,10 +5,11 @@
         id="video"
         src="../assets/typing-fast.mp4"
         autoplay
-        preload="metadata"
         v-show="isVisible"
         muted
         loop
+        @pause="updatePause"
+        @suspend="updateSuspend"
       ></video>
     </transition>
   </div>
@@ -23,6 +24,12 @@ export default {
     };
   },
   methods: {
+    updatePause() {
+      console.log("video has paused");
+    },
+    updateSuspend() {
+      console.log("video is suspended");
+    },
     timeOut() {
       setTimeout(() => (this.isVisible = true), 2800);
     },

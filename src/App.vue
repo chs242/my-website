@@ -7,7 +7,9 @@
       <router-link to="/projects">My Projects</router-link>
       <router-link to="/technologies">Technologies</router-link>
     </nav>
-    <router-view />
+    <keep-alive include="home">
+      <router-view />
+    </keep-alive>
   </div>
 </template>
 
