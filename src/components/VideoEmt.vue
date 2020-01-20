@@ -1,15 +1,15 @@
 <template>
-  <div class="video-container">
+  <div class="video-container-root-element">
     <transition-group name="fade">
-      <video
-        v-for="url in urlList"
-        :src="url"
-        :key="url"
-        autoplay
-        v-show="isVisible"
-        muted
-        loop
-      ></video>
+      <div class="video-container" v-for="url in urlList" :key="url">
+        <video
+          :src="url"
+          autoplay
+          v-show="isVisible"
+          muted
+          loop
+        ></video>
+      </div>
     </transition-group>
   </div>
 </template>
@@ -40,18 +40,14 @@ export default {
 
 <style scoped>
 .video-container {
-  /* width: 33%; */
-  position: relative;
-  /* overflow: hidden; */
-}
-video {
-  /* height: 300px; */
   width: 30%;
-  /* margin-left: -500px; */
+  position: relative;
+  overflow: hidden;
 }
 
-.video-container{
-  display: flex;
+#video {
+  margin-left: -370px;
+  width: 100%;
 }
 
 .fade-enter {
