@@ -4,11 +4,11 @@
       <video
         v-for="url in urlList"
         :src="url"
+        :key="url"
         autoplay
         v-show="isVisible"
         muted
         loop
-        :key="url"
       ></video>
     </transition-group>
   </div>
@@ -40,12 +40,18 @@ export default {
 
 <style scoped>
 .video-container {
-  width: 33%;
+  /* width: 33%; */
   position: relative;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 video {
-  margin-left: -500px;
+  /* height: 300px; */
+  width: 30%;
+  /* margin-left: -500px; */
+}
+
+.video-container{
+  display: flex;
 }
 
 .fade-enter {
