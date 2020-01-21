@@ -14,18 +14,42 @@ export default {
   data() {
     return {
       urlList: [
-        "/typing-fast.mp4",
-        "/emergency-emt.mp4",
-        "/gateshead-yeshiva.mp4"
+      ],
+      sources:[
+        {
+          src: "/typing-fast.mp4",
+          time: 2800
+        },
+        {
+          src: "/emergency-emt.mp4",
+          time: 5000
+        },
+        {
+          src: "/gateshead-yeshiva.mp4",
+          time: 7800
+        },
+        
       ]
     };
+  },
+  methods: {
+    timeOut(value, time) {
+      setTimeout(() => (this.urlList.push(value)), time);
+    },
+    executeSameFunctionXTimes(arr){
+      arr.forEach(item => {
+        this.timeOut(item.src, item.time);
+      });
+    }
+  },
+  mounted(){
+    this.executeSameFunctionXTimes(this.sources);
   }
 };
 </script>
 
 <style scoped>
 div {
-  display: flex;
   height: 60vh;
   width: 85vw;
   /*position absolute otherwise box jumps up and down in sync with the second
@@ -36,5 +60,6 @@ div {
   z-index: 1;
   opacity: 0.5;
   border-radius: 10px;
+  overflow: hidden;
 }
 </style>

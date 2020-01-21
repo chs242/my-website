@@ -3,9 +3,8 @@
     <transition-group name="fade">
       <div class="video-container" v-for="url in urlList" :key="url">
         <video
-          :src="url"
+          :src="url"  
           autoplay
-          v-show="isVisible"
           muted
           loop
         ></video>
@@ -19,35 +18,27 @@ export default {
   name: "VideoEmt",
   data() {
     return {
-      isVisible: false
     };
   },
   props: {
     urlList: {
       type: Array
     }
-  },
-  methods: {
-    timeOut() {
-      setTimeout(() => (this.isVisible = true), 5000);
-    }
-  },
-  mounted() {
-    this.timeOut();
   }
 };
 </script>
 
 <style scoped>
 .video-container {
-  width: 30%;
-  position: relative;
+  height: 50%;
+  width: 33%;
   overflow: hidden;
+  margin: 0 0.5vw;
+  border-radius: 20px;
 }
 
-#video {
-  margin-left: -370px;
-  width: 100%;
+.video-container-root-element > span{
+  display: flex;
 }
 
 .fade-enter {
