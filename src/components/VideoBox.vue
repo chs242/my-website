@@ -1,15 +1,19 @@
 <template>
-  <div class="video">
-    <VideoEmt :urlList="urlList"></VideoEmt>
+  <div class="video-box-root-element">
+    <transition>
+      <div class="video">
+        <Videos :urlList="urlList"></Videos>
+      </div>
+    </transition>
   </div>
 </template>
 <script>
-import VideoEmt from "@/components/VideoEmt.vue";
+import Videos from "@/components/Videos.vue";
 
 export default {
   name: "VideoBox",
   components: {
-    VideoEmt
+    Videos
   },
   data() {
     return {
@@ -33,6 +37,9 @@ export default {
     };
   },
   methods: {
+    toggle(){
+      this.isTrue = !this.isTrue;
+    },
     timeOut(value, time) {
       setTimeout(() => (this.urlList.push(value)), time);
     },
@@ -49,17 +56,11 @@ export default {
 </script>
 
 <style scoped>
-div {
+.video {
   height: 60vh;
   width: 85vw;
-  /*position absolute otherwise box jumps up and down in sync with the second
-    typed.js element*/
-  position: absolute;
-  bottom: 1vh;
-  color: #000;
-  z-index: 1;
-  opacity: 0.5;
-  border-radius: 10px;
+  color: #111;
+  opacity: 0.2;
   overflow: hidden;
 }
 </style>

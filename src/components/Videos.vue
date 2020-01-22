@@ -1,6 +1,6 @@
 <template>
   <div class="video-container-root-element">
-    <transition-group name="fade">
+    <transition-group name="lovely">
       <div class="video-container" v-for="url in urlList" :key="url">
         <video
           :src="url"  
@@ -15,7 +15,7 @@
 
 <script>
 export default {
-  name: "VideoEmt",
+  name: "Videos",
   data() {
     return {
     };
@@ -30,8 +30,7 @@ export default {
 
 <style scoped>
 .video-container {
-  height: 50%;
-  width: 33%;
+  width: 32%;
   overflow: hidden;
   margin: 0 0.5vw;
   border-radius: 20px;
@@ -41,15 +40,15 @@ export default {
   display: flex;
 }
 
-.fade-enter {
+.lovely-enter {
   opacity: 0;
 }
 
-.fade-enter-active {
+.lovely-enter-active {
   transition: 3.5s;
 }
 
-.fade-enter-to {
+.lovely-enter-to {
   opacity: 1;
 }
 </style>

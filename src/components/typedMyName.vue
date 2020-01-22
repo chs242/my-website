@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="typed-root-element">
     <div class="typed1">
       <vue-typed-js
         :strings="['Hello my name is Edward Stern ^1000 I am a ']"
@@ -36,10 +36,14 @@ export default {
 </script>
 
 <style scoped>
+.typed-root-element{
+  min-height: 39vh;
+}
+
 .typed1 {
-  font-size: 4vh;
+  font-size: 3vh;
 }
 .typed2 {
-  font-size: 4vh;
+  font-size: 3vh;
 }
 </style>

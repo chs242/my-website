@@ -1,7 +1,9 @@
 <template>
-  <div class="home">
-    <typedMyName />
-    <VideoBox class="vid-box" />
+  <div class="home-router-wrapper">
+    <div class="home">
+      <typedMyName />
+      <VideoBox class="vid-box" />
+    </div>
   </div>
 </template>
 
@@ -20,6 +22,12 @@ export default {
 </script>
 
 <style scoped>
+.home-router-wrapper{
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
 .vid-box {
   position: absolute;
   right: 1vw;
